@@ -23,6 +23,8 @@ exports.query = function (el) {
 }
 
 /**
+ *
+ * 判断节点是否在 文档流中
  * Check if a node is in the document.
  * Note: document.documentElement.contains should work here
  * but always returns false for comment nodes in phantomjs,

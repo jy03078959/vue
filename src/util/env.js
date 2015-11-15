@@ -37,6 +37,8 @@ if (inBrowser && !exports.isIE9) {
 }
 
 /**
+ * 设置下一帧调用 指定方法。如果支持 MutationObserver 就是用它。如果不支持
+ * 就用settimeout(0) 替代。
  * Defer a task to execute it asynchronously. Ideally this
  * should be executed as a microtask, so we leverage
  * MutationObserver if it's available, and fallback to

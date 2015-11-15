@@ -1,4 +1,5 @@
 /**
+ * 给对象设置一个属性，如果添加一个不存在的新熟悉，会触发改变的事件。
  * Set a property on an object. Adds the new property and
  * triggers change notification if the property doesn't
  * already exist.
@@ -135,6 +136,8 @@ exports.toBoolean = function (value) {
 }
 
 /**
+ *
+ * 去掉两头的 " ' 符号
  * Strip quotes from a string
  *
  * @param {String} str
@@ -150,6 +153,7 @@ exports.stripQuotes = function (str) {
 }
 
 /**
+ * 首字母大写处理
  * Camelize a hyphen-delmited string.
  *
  * @param {String} str
@@ -166,6 +170,8 @@ function toUpper (_, c) {
 }
 
 /**
+ * 把驼峰规范的 变成 连字符处理显示
+ * 比如 stoneShip  -> stone-ship
  * Hyphenate a camelCase string.
  *
  * @param {String} str
@@ -304,6 +310,8 @@ exports.define = function (obj, key, val, enumerable) {
 }
 
 /**
+ * 定义一个延迟调用的方法，在这个时间内重复调用他是没用的。只有到时间到了
+ * 才会触发他调用一次。方便监听 input数输入框数据频繁改变等处理。
  * Debounce a function so it only gets called after the
  * input stops arriving after the given wait period.
  *
@@ -371,6 +379,8 @@ exports.cancellable = function (fn) {
 }
 
 /**
+ *
+ * 比较对象相等，只要数据相等 就行。
  * Check if two values are loosely equal - that is,
  * if they are plain objects, do they have the same shape?
  *
